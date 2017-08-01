@@ -1,4 +1,6 @@
 const electron = require('electron')
+var Client = require('node-rest-client').Client;
+
 // Module to control application life.
 const app = electron.app
 // Module to create native browser window.
@@ -56,5 +58,12 @@ app.on('activate', function () {
   }
 })
 
-// In this file you can include the rest of your app's specific main process
-// code. You can also put them in separate files and require them here.
+
+ 
+var client = new Client();
+ 
+// direct way 
+client.get("http://127.0.0.1:8181/api/v1/hello", function (data, response) {
+    // parsed response body as js object 
+    console.log(data);
+});

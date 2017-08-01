@@ -8,6 +8,7 @@
 
     <!-- Javascript -->
     <script src="js/menu.js" charset="utf-8"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="window">
@@ -179,5 +180,17 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript">
+    $.ajax({
+        url: '127.0.0.1/api/v1/hello',
+        type: 'GET',
+        data:({
+            id: 0
+        }),
+        success:function(results) {
+            console.log( results );
+        }
+    });
+    </script>
   </body>
 </html>

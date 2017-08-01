@@ -11,7 +11,7 @@ let server = HTTPServer()
 // --------
 // ROUTES
 
-var routes = Routes(baseUri:"/v1")
+var routes = Routes(baseUri:"/api/v1")
 
 func JSONMessage(message: String, response: HTTPResponse) {
     do {
