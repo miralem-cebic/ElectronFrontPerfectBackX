@@ -12,3 +12,5 @@ In this case here, the server is a local running webserver realized by the Swift
 So the Server-App has a REST-API and the Frontend-App can call the API as simple as normale (GET, POST, DELETE, PATCH)
 
 ![screen](github/app.png)
+
+[Read Blog Entry](https://miralem-cebic.de/blog/index.php?controller=post&action=view&id_post=5)
