@@ -1,0 +1,22 @@
+[
+    "servers":[
+        [
+            "name":"localhost",
+            "port":8080,
+            "routes":[
+                [
+                    "method":"get",
+                    "uri":"/**",
+                    "handler":"PerfectHTTPServer.HTTPHandler.staticFiles",
+                    "documentRoot":"/path/to/webroot"
+                ],
+                [
+                    "methods":["get", "post"],
+                    "uri":"/api/**",
+                    "handler":"PerfectHTTPServer.HTTPHandler.redirect",
+                    "base":"http://other.server.ca"
+                ]
+            ]
+        ]
+    ]
+]
